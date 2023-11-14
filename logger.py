@@ -15,7 +15,7 @@ def call(chain, calldata):
         "jsonrpc": "2.0",
         "method": "eth_call",
         "params": [{
-            "to": "0xdA0Ab1e0017DEbCd72Be8599041a2aa3bA7e740F",
+            "to": "0x000000000774019b96f067cda9fE26076649c729",
             "data": calldata
         }, "latest"],
         "id": 0
@@ -105,7 +105,7 @@ def update(chain):
 
 g = Github(os.environ["GITHUB_TOKEN"])
 repo = g.get_repo(os.environ["CHAINLOG_REPO"])
-chains = ["mainnet", "goerli"]
+chains = ["darwinia", "arbitrum"]
 while True:
     for chain in chains:
         update(chain)
